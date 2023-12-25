@@ -11,11 +11,10 @@ import {
   HttpException,
 } from '@nestjs/common';
 import { AboutService } from '../services/about.service';
-import { About } from '../schemas/about.schema';
 import { CreateAboutDto, UpdateAboutDto } from '../dto/about.dto';
 import { Response } from 'express';
 
-@Controller('about')
+@Controller('/about')
 export class AboutController {
   constructor(private readonly aboutService: AboutService) {}
 

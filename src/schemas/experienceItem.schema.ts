@@ -7,10 +7,16 @@ export enum WorkLoad {
   Project = 'Project',
 }
 
+export enum WorkPlace {
+  Remote = 'Remote',
+  Office = 'Office',
+  Hybrid = 'Hybrid',
+}
+
 @Schema()
 export class ExperienceItem extends Document {
   @Prop({ required: true })
-  title: string;
+  position: string;
 
   @Prop({ required: true })
   company: string;
@@ -31,10 +37,16 @@ export class ExperienceItem extends Document {
   current: boolean;
 
   @Prop({ required: true })
+  region: string;
+
+  @Prop({ required: true })
+  place: WorkPlace;
+
+  @Prop({ required: true })
   intro: string;
 
   @Prop([String])
-  list: string[];
+  achievements: string[];
 
   @Prop([String])
   skills: string[];

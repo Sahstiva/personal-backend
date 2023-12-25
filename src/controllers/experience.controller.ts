@@ -11,9 +11,11 @@ import {
   HttpException,
 } from '@nestjs/common';
 import { ExperienceService } from '../services/experience.service';
-import { Experience } from '../schemas/experience.schema';
 import { Response } from 'express';
-import { CreateExperienceDto, UpdateExperienceDto } from "../dto/experience.dto";
+import {
+  CreateExperienceDto,
+  UpdateExperienceDto,
+} from '../dto/experience.dto';
 
 @Controller('experience')
 export class ExperienceController {

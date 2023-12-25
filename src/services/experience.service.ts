@@ -2,7 +2,10 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Experience } from '../schemas/experience.schema';
 import { Model } from 'mongoose';
-import { CreateExperienceDto, UpdateExperienceDto } from "../dto/experience.dto";
+import {
+  CreateExperienceDto,
+  UpdateExperienceDto,
+} from '../dto/experience.dto';
 
 @Injectable()
 export class ExperienceService {

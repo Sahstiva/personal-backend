@@ -1,12 +1,14 @@
 import { CreateAboutDto, UpdateAboutDto } from './about.dto';
 export class CreateExperienceItemDto {
-  title: string;
+  position: string;
   company: string;
   companyLogo: string;
   load: 'Full-time' | 'Part-Time' | 'Project';
   startDate: Date;
   endDate?: Date;
   current: boolean;
+  region: string;
+  place: 'Remote' | 'Office' | 'Hybrid';
   intro: string;
   list: string[];
   skills: string[];
