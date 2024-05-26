@@ -26,10 +26,14 @@ export class ExperienceService {
     return newExperience.save();
   }
 
-  async update(id: string, experienceData: UpdateExperienceDto): Promise<Experience> {
-    return this.experienceModel
+  async update(
+    id: string,
+    experienceData: UpdateExperienceDto,
+  ): Promise<Experience> {
+    const result = await this.experienceModel
       .findByIdAndUpdate(id, experienceData, { new: true })
       .exec();
+    return result;
   }
 
   async delete(id: string): Promise<any> {

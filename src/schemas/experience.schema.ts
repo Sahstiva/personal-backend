@@ -8,7 +8,7 @@ export class Experience extends Document {
   title: string;
 
   @Prop({ type: [ExperienceItemSchema], required: true })
-  experienceItem: ExperienceItem[];
+  items: ExperienceItem[];
 }
 
 export const ExperienceSchema = SchemaFactory.createForClass(Experience);
